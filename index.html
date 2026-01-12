@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyVerse | Developer & Security Enthusiast</title>
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Dark Theme Colors */
+        body { background-color: #0f172a; color: #e2e8f0; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header {
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #1e293b;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #22c55e; letter-spacing: 1px; }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero span { color: #22c55e; } /* Hacker Green Color */
+        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto 30px auto; }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #22c55e;
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .btn:hover { background-color: #16a34a; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid #22c55e; color: #22c55e; }
+        .btn-outline:hover { background: #22c55e; color: #000; }
+
+        /* Projects Section */
+        .section { padding: 60px 10%; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: #22c55e; }
+        .project-card h3 { margin-bottom: 10px; color: #fff; }
+        .project-card p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+        .status { font-size: 0.8rem; padding: 2px 8px; border-radius: 4px; background: #22c55e; color: #000; }
+
+        /* Footer (Legal Section) */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #020617;
+            border-top: 1px solid #1e293b;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .footer-links { margin-bottom: 15px; }
+        .footer-links a { color: #94a3b8; margin: 0 10px; }
+        .footer-links a:hover { color: #22c55e; text-decoration: underline; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">LuckyVerse.tech</div>
+        </header>
+
+    <section class="hero">
+        <h1>Heyy! Welcome to <span>Lucky's Universe!</span></h1>
+        <p>Cyber Security Student & Web Developer. Building tools for the future.</p>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="https://github.com/lucky-om" target="_blank" class="btn btn-outline">GitHub Profile</a>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3>🏦 Jalsa Bank</h3>
+                    <span class="status">Live</span>
+                </div>
+                <p>A smart financial calculator for managing group savings, loans, and interest tracking. Built with secure client-side logic.</p>
+                <a href="https://jalsabank.luckyverse.tech" target="_blank" class="btn" style="width:100%; text-align:center;">Launch App</a>
+            </div>
+
+            <div class="project-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3>🛡️ CTF Challenges</h3>
+                    <span class="status" style="background:#fbbf24;">Coming Soon</span>
+                </div>
+                <p>Educational ethical hacking challenges and cybersecurity resources. Practice your skills in a safe environment.</p>
+                <a href="#" class="btn btn-outline" style="width:100%; text-align:center; cursor: not-allowed;">In Development</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2026 LuckyVerse.tech. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Designed with 💻 & ☕ by Lucky.</p>
+    </footer>
+
+</body>
+</html>
+
