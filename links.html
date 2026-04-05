@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links — LuckyVerse.tech</title>
+  <meta name="description" content="All of Lucky's links — GitHub, LinkedIn, Instagram, Telegram, Portfolio and more.">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080d1a;
+      --bg-card: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --border-hover: rgba(16,185,129,0.4);
+      --accent: #10b981;
+      --accent-glow: rgba(16,185,129,0.1);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --text-dim: #475569;
+      --white: #ffffff;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius: 14px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(16,185,129,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16,185,129,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none; z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: -150px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(16,185,129,0.07) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .links-container {
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Profile Section */
+    .profile {
+      text-align: center;
+      margin-bottom: 48px;
+      animation: fadeUp 0.7s ease-out both;
+    }
+    .profile-photo-wrap {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 20px;
+    }
+    .profile-photo {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid rgba(16,185,129,0.4);
+      box-shadow: 0 0 32px rgba(16,185,129,0.15);
+      position: relative; z-index: 1;
+    }
+    .profile-ring {
+      position: absolute; inset: -8px;
+      border-radius: 50%;
+      border: 2px dashed rgba(16,185,129,0.2);
+      animation: spin 20s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--font-mono);
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .pulse-dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .profile-name { font-size: 1.6rem; font-weight: 800; color: var(--white); letter-spacing: -0.5px; margin-bottom: 6px; }
+    .profile-handle { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); margin-bottom: 10px; }
+    .profile-bio { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; max-width: 340px; margin: 0 auto; }
+
+    /* Links */
+    .links-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--text);
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.7s ease-out both;
+    }
+    .link-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      border-radius: 0 4px 4px 0;
+      transform: scaleY(0);
+      transition: transform 0.3s;
+    }
+    .link-item:hover {
+      border-color: var(--border-hover);
+      background: var(--accent-glow);
+      transform: translateY(-3px) translateX(2px);
+      box-shadow: 0 10px 28px rgba(16,185,129,0.1);
+      color: var(--white);
+    }
+    .link-item:hover::before { transform: scaleY(1); }
+
+    .link-item:nth-child(1) { animation-delay: 0.05s; }
+    .link-item:nth-child(2) { animation-delay: 0.10s; }
+    .link-item:nth-child(3) { animation-delay: 0.15s; }
+    .link-item:nth-child(4) { animation-delay: 0.20s; }
+    .link-item:nth-child(5) { animation-delay: 0.25s; }
+    .link-item:nth-child(6) { animation-delay: 0.30s; }
+    .link-item:nth-child(7) { animation-delay: 0.35s; }
+
+    .link-icon { font-size: 1.5rem; flex-shrink: 0; width: 36px; text-align: center; }
+    .link-info { flex: 1; }
+    .link-name { font-weight: 700; font-size: 0.95rem; }
+    .link-desc { font-size: 0.76rem; color: var(--text-dim); font-family: var(--font-mono); margin-top: 2px; transition: color 0.3s; }
+    .link-item:hover .link-desc { color: rgba(16,185,129,0.5); }
+    .link-arrow { color: var(--text-dim); font-size: 1.1rem; transition: all 0.3s; flex-shrink: 0; }
+    .link-item:hover .link-arrow { color: var(--accent); transform: translate(2px, -2px); }
+
+    /* Divider */
+    .links-divider {
+      display: flex; align-items: center; gap: 12px;
+      margin: 8px 0;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .links-divider::before, .links-divider::after {
+      content: ''; flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      text-align: center;
+      position: relative; z-index: 1;
+    }
+    .footer-legal { display: flex; gap: 20px; justify-content: center; margin-bottom: 12px; }
+    .footer-legal a { color: var(--text-dim); text-decoration: none; font-size: 0.78rem; transition: color 0.3s; }
+    .footer-legal a:hover { color: var(--accent); }
+    .footer-copy { font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="links-container">
+
+    <!-- Profile -->
+    <div class="profile">
+      <div class="profile-photo-wrap">
+        <img src="logo.jpg" alt="Lucky" class="profile-photo" loading="lazy">
+        <div class="profile-ring"></div>
+      </div>
+      <div class="status-pill"><span class="pulse-dot"></span>Active</div>
+      <div class="profile-name">Lucky</div>
+      <div class="profile-handle">@LuckyVerse</div>
+      <div class="profile-bio">Cybersecurity student · Ethical hacker · Developer<br>SDJ International College · Semicolon IT Wing</div>
+    </div>
+
+    <!-- Links -->
+    <div class="links-list">
+
+      <div class="links-divider">Portfolio</div>
+
+      <a href="https://luckyverse.tech" class="link-item">
+        <span class="link-icon">💻</span>
+        <div class="link-info">
+          <div class="link-name">Portfolio</div>
+          <div class="link-desc">luckyverse.tech</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <div class="links-divider">Social</div>
+
+      <a href="https://github.com/lucky-om" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">🐙</span>
+        <div class="link-info">
+          <div class="link-name">GitHub</div>
+          <div class="link-desc">@lucky-om</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/lucky-om" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">💼</span>
+        <div class="link-info">
+          <div class="link-name">LinkedIn</div>
+          <div class="link-desc">lucky-om</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a href="https://www.instagram.com/ishowplugs/" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">📸</span>
+        <div class="link-info">
+          <div class="link-name">Instagram</div>
+          <div class="link-desc">@ishowplugs</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a href="https://t.me/universeoflucky" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">✈️</span>
+        <div class="link-info">
+          <div class="link-name">Telegram Channel</div>
+          <div class="link-desc">@universeoflucky</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <div class="links-divider">Projects</div>
+
+      <a href="https://codearena.luckyverse.tech" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">⚔️</span>
+        <div class="link-info">
+          <div class="link-name">CodeArena</div>
+          <div class="link-desc">Competitive coding — Inferno '26</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a href="https://jalsabank.luckyverse.tech" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">🏦</span>
+        <div class="link-info">
+          <div class="link-name">Jalsa Bank</div>
+          <div class="link-desc">Smart finance tracker</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+      <a href="https://soundlux.luckyverse.tech" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-icon">🎧</span>
+        <div class="link-info">
+          <div class="link-name">SoundLux</div>
+          <div class="link-desc">Premium headphone store</div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-copy">© 2026 LuckyVerse.tech</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

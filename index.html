@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO ── -->
+  <title>LuckyVerse</title>
+  <meta name="description"
+    content="LuckyVerse — Official portfolio of Lucky. Cybersecurity student, ethical hacker, developer of CodeArena, SphereWalk, Jalsa Bank & SoundLux. SDJ International College, Surat.">
+  <meta name="keywords"
+    content="LuckyVerse, Lucky, Cybersecurity, Ethical Hacking, Penetration Testing, CodeArena, SphereWalk, JalsaBank, SoundLux, Semicolon IT, SDJ International College">
+  <meta name="author" content="Lucky">
+  <meta name="robots" content="index, follow">
+
+  <!-- ── SECURITY HEADERS ── -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://github-readme-stats.vercel.app https://ghchart.rshah.org https://streak-stats.demolab.com data:; connect-src 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- ── OPEN GRAPH ── -->
+  <meta property="og:title" content="LuckyVerse | Cybersecurity & Development">
+  <meta property="og:description"
+    content="Portfolio of Lucky — Cybersecurity student and full-stack developer based in Surat, India.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luckyverse.tech">
+
+  <!-- ── FAVICON ── -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+  <!-- ── STYLES ── -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════ -->
+  <nav id="navbar">
+    <a class="nav-logo" href="#">Lucky<span>Verse.tech</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="#" class="resume-btn" id="resumeNavBtn"
+        onclick="alert('🚀 Resume coming soon! Check back later.'); return false;">Resume ↗</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#github">GitHub</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a class="mobile-resume" href="#" onclick="alert('🚀 Resume coming soon!'); return false;">Resume — Coming Soon</a>
+  </div>
+
+
+  <!-- ════════════════════════════════════
+       HERO
+  ════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Available for Internships &amp; Collaborations
+        </div>
+
+        <h1>
+          <span class="name">Hi, I'm Lucky.</span><br>
+          I Break Things<br>
+          <span class="highlight">to Build Them Better.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Cybersecurity student &amp; full-stack developer at SDJ International College, Surat.
+          Member of Semicolon IT Wing. I build secure systems by day, and exploit insecure ones by night (ethically 😄).
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">
+            <span>⚔️</span> View Projects
+          </a>
+          <a href="#" id="resumeHeroBtn" class="btn-secondary"
+            onclick="alert('🚀 Resume is being crafted. Check back soon!'); return false;">
+            <span>📄</span> Resume — Coming Soon
+          </a>
+          <a href="https://github.com/lucky-om" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <span>🐙</span> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Terminal -->
+      <div class="terminal fade-up">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="terminal-title">lucky@universe ~ zsh</div>
+        </div>
+        <div class="terminal-body" id="terminalBody"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       STATS STRIP
+  ════════════════════════════════════ -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num" data-count="5" data-suffix="+">0+</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-item fade-up delay-1">
+        <div class="stat-num" data-count="2" data-suffix="">0</div>
+        <div class="stat-label">Hackathons Competed</div>
+      </div>
+      <div class="stat-item fade-up delay-2">
+        <div class="stat-num" data-count="10" data-suffix="+">0+</div>
+        <div class="stat-label">CTF Challenges</div>
+      </div>
+      <div class="stat-item fade-up delay-3">
+        <div class="stat-num" data-count="1" data-suffix="">0</div>
+        <div class="stat-label">Hackathon Won</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <span class="section-tag">01. about</span>
+      <h2 class="section-title">The Human Behind<br>The Terminal</h2>
+      <p class="section-subtitle">A little about who I am, what drives me, and where I'm headed.</p>
+
+      <div class="about-grid">
+        <div class="about-photo-wrap fade-up">
+          <img src="logo.jpg" alt="Lucky — Cybersecurity Developer" class="about-photo" loading="lazy">
+          <div class="about-ring"></div>
+        </div>
+
+        <div class="about-text fade-up delay-1">
+          <h3>Lucky — Hacker by curiosity,<br>developer by passion.</h3>
+          <p>
+            I'm a Cybersecurity student based in <strong>Surat, India</strong>, pursuing my degree at
+            <strong>SDJ International College</strong>. I'm a core member of the <strong>Semicolon IT Wing</strong>,
+            where I lead and develop tech events like <strong>CodeArena</strong> for Inferno'26.
+          </p>
+          <p>
+            My work lives at the intersection of offensive security and full-stack development.
+            By day, I'm crafting web platforms and solving algorithmic puzzles. By night, I'm running
+            Nmap scans, digging through CTF challenges, and exploring the world of ethical hacking.
+          </p>
+          <p>
+            I believe in building things that are not just functional, but <strong>secure, scalable, and
+              beautiful</strong>.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag">Ethical Hacking</span>
+            <span class="tag">Penetration Testing</span>
+            <span class="tag">Full-Stack Dev</span>
+            <span class="tag">Kali Linux</span>
+            <span class="tag">CTF Player</span>
+            <span class="tag">Semicolon IT Wing</span>
+            <span class="tag">SDJ Intl. College</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <span class="section-tag">02. skills</span>
+      <h2 class="section-title">My Toolkit</h2>
+      <p class="section-subtitle">Tools, technologies, and frameworks I use to hack, build, and ship.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-up"><span class="skill-icon">🐍</span>
+          <div class="skill-name">Python</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+        <div class="skill-card fade-up delay-1"><span class="skill-icon">🐉</span>
+          <div class="skill-name">Kali Linux</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+        <div class="skill-card fade-up delay-2"><span class="skill-icon">🕷️</span>
+          <div class="skill-name">Burp Suite</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-card fade-up delay-3"><span class="skill-icon">🔍</span>
+          <div class="skill-name">Nmap</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-card fade-up delay-4"><span class="skill-icon">📡</span>
+          <div class="skill-name">Wireshark</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-card fade-up delay-5"><span class="skill-icon">💀</span>
+          <div class="skill-name">Metasploit</div>
+          <div class="skill-level">Learning</div>
+        </div>
+        <div class="skill-card fade-up"><span class="skill-icon">⚡</span>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+        <div class="skill-card fade-up delay-1"><span class="skill-icon">🌐</span>
+          <div class="skill-name">HTML / CSS</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+        <div class="skill-card fade-up delay-2"><span class="skill-icon">🔧</span>
+          <div class="skill-name">Git</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-card fade-up delay-3"><span class="skill-icon">🐧</span>
+          <div class="skill-name">Linux</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+        <div class="skill-card fade-up delay-4"><span class="skill-icon">🗄️</span>
+          <div class="skill-name">Supabase</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-card fade-up delay-5"><span class="skill-icon">☁️</span>
+          <div class="skill-name">Cloudflare</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <span class="section-tag">03. projects</span>
+      <h2 class="section-title">What I've Built</h2>
+      <p class="section-subtitle">A collection of projects ranging from hackathon submissions to production-grade tools.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- CodeArena -->
+        <div class="project-card fade-up">
+          <div class="project-header">
+            <div class="project-badges">
+              <span class="badge badge-green">Inferno '26</span>
+              <span class="badge badge-purple">Event Lead</span>
+            </div>
+            <span class="project-emoji">⚔️</span>
+          </div>
+          <h3>CodeArena</h3>
+          <p>Flagship competitive coding event for the Semicolon IT Wing at SDJ Inferno'26. Strategic gameplay meets
+            algorithmic challenges in a real-time battle arena.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Git</span>
+          </div>
+          <div class="project-links">
+            <a href="https://codearena.luckyverse.tech" target="_blank" rel="noopener noreferrer"
+              class="proj-link proj-link-primary">Launch Arena ↗</a>
+            <a href="https://github.com/lucky-om" target="_blank" rel="noopener noreferrer"
+              class="proj-link proj-link-secondary">GitHub</a>
+          </div>
+        </div>
+
+        <!-- SphereWalk -->
+        <div class="project-card fade-up delay-1">
+          <div class="project-header">
+            <div class="project-badges">
+              <span class="badge badge-blue">Hackathon</span>
+              <span class="badge badge-orange">24hr Build</span>
+            </div>
+            <span class="project-emoji">🌐</span>
+          </div>
+          <h3>SphereWalk</h3>
+          <p>A 360° immersive navigation website built in 24 hours during SCETATHON at SCET College, Surat. Focused on
+            pioneering web-based spatial navigation experiences.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">360° API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://spherewalk.luckyverse.tech/" target="_blank" rel="noopener noreferrer"
+              class="proj-link proj-link-primary">Explore Sphere ↗</a>
+          </div>
+        </div>
+
+        <!-- Jalsa Bank -->
+        <div class="project-card fade-up delay-2">
+          <div class="project-header">
+            <div class="project-badges">
+              <span class="badge badge-green">Finance Tool</span>
+            </div>
+            <span class="project-emoji">🏦</span>
+          </div>
+          <h3>Jalsa Bank</h3>
+          <p>Smart savings and loan tracker built for local financial groups (jalsas). Secure, real-time, and built for
+            community financial management with clean dashboards.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">LocalStorage</span>
+          </div>
+          <div class="project-links">
+            <a href="https://jalsabank.luckyverse.tech" target="_blank" rel="noopener noreferrer"
+              class="proj-link proj-link-primary">Open Vault ↗</a>
+          </div>
+        </div>
+
+        <!-- SoundLux -->
+        <div class="project-card fade-up delay-3">
+          <div class="project-header">
+            <div class="project-badges">
+              <span class="badge badge-blue">Hackathon</span>
+              <span class="badge badge-orange">6hr Build</span>
+            </div>
+            <span class="project-emoji">🎧</span>
+          </div>
+          <h3>SoundLux</h3>
+          <p>Premium e-commerce platform for headphones. Built in 6 hours during HackOverflow at SDJ International
+            College for Inferno'26. Features Supabase auth & product management.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Supabase</span>
+          </div>
+          <div class="project-links">
+            <a href="https://soundlux.luckyverse.tech" target="_blank" rel="noopener noreferrer"
+              class="proj-link proj-link-primary">View Store ↗</a>
+          </div>
+        </div>
+
+        <!-- CTF Platform -->
+        <div class="project-card fade-up delay-4">
+          <div class="project-header">
+            <div class="project-badges">
+              <span class="badge badge-purple">CyberSec</span>
+            </div>
+            <span class="project-emoji">🛡️</span>
+          </div>
+          <h3>CTF Challenge Platform</h3>
+          <p>A custom-built Capture The Flag platform for cybersecurity students to practice penetration testing, OSINT,
+            web exploitation, and cryptographic challenges.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">CTFd</span>
+            <span class="tech-tag">Kali</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link proj-link-disabled">Coming Soon</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       GITHUB ACTIVITY
+  ════════════════════════════════════ -->
+  <section class="section section-alt" id="github">
+    <div class="section-inner">
+      <span class="section-tag">04. activity</span>
+      <h2 class="section-title">GitHub Activity</h2>
+      <p class="section-subtitle">My open-source contributions and commit history — always building something.</p>
+
+      <div class="github-wrap fade-up">
+        <div class="github-stats-row">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=lucky-om&show_icons=true&theme=transparent&title_color=10b981&icon_color=10b981&text_color=94a3b8&border_color=1f2937&hide_border=false&rank_icon=github"
+            alt="Lucky's GitHub Stats" loading="lazy">
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucky-om&layout=compact&theme=transparent&title_color=10b981&text_color=94a3b8&border_color=1f2937"
+            alt="Lucky's Top Languages" loading="lazy">
+        </div>
+        <div class="github-chart-row">
+          <img src="https://ghchart.rshah.org/10b981/lucky-om" alt="Lucky's GitHub contribution chart" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       BLOG / WRITE-UPS
+  ════════════════════════════════════ -->
+  <section class="section" id="blog">
+    <div class="section-inner">
+      <span class="section-tag">05. blog</span>
+      <h2 class="section-title">CTF Write-ups &amp; Blog</h2>
+      <p class="section-subtitle">Documenting my journey through Capture The Flag challenges and cybersecurity research.
+        Write-ups coming soon!</p>
+
+      <div class="blog-grid">
+        <div class="blog-card fade-up">
+          <div class="blog-card-tag">🔴 Web Exploitation</div>
+          <h3>Breaking Into Web Apps: SQL Injection Deep Dive</h3>
+          <p>An in-depth walkthrough of SQL injection vulnerabilities — from basic UNION attacks to blind SQLi and
+            out-of-band exfiltration techniques.</p>
+          <div class="coming-soon-pill"><span class="coming-soon-dot"></span>Write-up coming soon</div>
+        </div>
+
+        <div class="blog-card fade-up delay-1">
+          <div class="blog-card-tag">🔵 OSINT</div>
+          <h3>OSINT Toolkit: Finding Anyone Online</h3>
+          <p>Exploring open-source intelligence tools and methodologies used in real-world reconnaissance — ethically
+            and legally.</p>
+          <div class="coming-soon-pill"><span class="coming-soon-dot"></span>Write-up coming soon</div>
+        </div>
+
+        <div class="blog-card fade-up delay-2">
+          <div class="blog-card-tag">🟣 Cryptography</div>
+          <h3>CTF Crypto Challenges: From Caesar to RSA</h3>
+          <p>Solving cryptographic CTF challenges step by step — classical ciphers, encoding tricks, and modern RSA
+            vulnerabilities.</p>
+          <div class="coming-soon-pill"><span class="coming-soon-dot"></span>Write-up coming soon</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       CERTIFICATIONS
+  ════════════════════════════════════ -->
+  <section class="section section-alt" id="certifications">
+    <div class="section-inner">
+      <span class="section-tag">06. certifications</span>
+      <h2 class="section-title">Certifications &amp; Platforms</h2>
+      <p class="section-subtitle">My journey through cybersecurity platforms and professional certifications.</p>
+
+      <div class="cert-grid">
+        <div class="cert-card fade-up">
+          <span class="cert-icon">🟥</span>
+          <div>
+            <div class="cert-name">TryHackMe</div>
+            <div class="cert-org">Rooms & learning paths</div>
+            <span class="cert-status status-wip">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up delay-1">
+          <span class="cert-icon">🟩</span>
+          <div>
+            <div class="cert-name">HackTheBox</div>
+            <div class="cert-org">Machine challenges</div>
+            <span class="cert-status status-wip">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up delay-2">
+          <span class="cert-icon">🎓</span>
+          <div>
+            <div class="cert-name">Google Cybersecurity</div>
+            <div class="cert-org">Coursera Certificate</div>
+            <span class="cert-status status-planned">Planned</span>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up delay-3">
+          <span class="cert-icon">🔵</span>
+          <div>
+            <div class="cert-name">CompTIA Security+</div>
+            <div class="cert-org">CompTIA</div>
+            <span class="cert-status status-planned">Planned</span>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up delay-4">
+          <span class="cert-icon">🤖</span>
+          <div>
+            <div class="cert-name">eJPT — Junior Pen Tester</div>
+            <div class="cert-org">eLearnSecurity</div>
+            <span class="cert-status status-planned">Planned</span>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up delay-5">
+          <span class="cert-icon">🐍</span>
+          <div>
+            <div class="cert-name">Python for Security</div>
+            <div class="cert-org">Udemy / Self-study</div>
+            <span class="cert-status status-wip">In Progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       CONTACT & SOCIALS
+  ════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <span class="section-tag">07. contact</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle">Whether it's a collaboration, internship, security project, or just a conversation
+        about hacking — reach out.</p>
+
+      <div class="socials-grid">
+        <a href="https://github.com/lucky-om" target="_blank" rel="noopener noreferrer" class="social-card fade-up">
+          <span class="social-icon">🐙</span>
+          <div>
+            <div class="social-name">GitHub</div>
+            <div class="social-handle">@lucky-om</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/lucky-om" target="_blank" rel="noopener noreferrer"
+          class="social-card fade-up delay-1">
+          <span class="social-icon">💼</span>
+          <div>
+            <div class="social-name">LinkedIn</div>
+            <div class="social-handle">lucky-om</div>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/ishowplugs/" target="_blank" rel="noopener noreferrer"
+          class="social-card fade-up delay-2">
+          <span class="social-icon">📸</span>
+          <div>
+            <div class="social-name">Instagram</div>
+            <div class="social-handle">@ishowplugs</div>
+          </div>
+        </a>
+
+        <a href="https://t.me/universeoflucky" target="_blank" rel="noopener noreferrer"
+          class="social-card fade-up delay-3">
+          <span class="social-icon">✈️</span>
+          <div>
+            <div class="social-name">Telegram</div>
+            <div class="social-handle">@universeoflucky</div>
+          </div>
+        </a>
+
+        <a href="https://luckyverse.tech/links.html" class="social-card fade-up delay-4">
+          <span class="social-icon">🔗</span>
+          <div>
+            <div class="social-name">All Links</div>
+            <div class="social-handle">luckyverse.tech/links</div>
+          </div>
+        </a>
+
+        <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer" class="social-card fade-up delay-5">
+          <span class="social-icon">🟥</span>
+          <div>
+            <div class="social-name">TryHackMe</div>
+            <div class="social-handle">Profile</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="nav-logo" href="#">Lucky<span>Verse.tech</span></a>
+          <p>A space where cybersecurity meets creative development. Built with care, secured with knowledge.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#github">GitHub Activity</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/lucky-om" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/lucky-om" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li><a href="https://www.instagram.com/ishowplugs/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li><a href="https://t.me/universeoflucky" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">/* Developed by Lucky — © 2026 LuckyVerse.tech */</div>
+        <div class="footer-legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/links.html">All Links</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="main.js"></script>
+</body>
+
+</html>
