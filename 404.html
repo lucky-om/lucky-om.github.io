@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="/logo.jpg">
+    
+    <title>404 Not Found | LuckyVerse</title>
+    <meta name="description" content="404 Page Not Found - LuckyVerse">
+    
+    <style>
+        /* Modern Dark Neon Theme */
+        :root {
+            --bg-black: #050505;
+            --card-bg: #0f0f0f;
+            --neon-green: #39ff14;
+            --neon-cyan: #00f3ff;
+            --neon-red: #ff3939;
+            --text-silver: #c0c0c0;
+            --glow: 0 0 10px rgba(255, 57, 57, 0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Consolas', monospace; }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-silver);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Glitch Effect Header */
+        header {
+            padding: 25px 10%;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--neon-cyan);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--neon-green);
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .terminal-prompt {
+            color: var(--neon-cyan);
+            font-size: 0.9rem;
+        }
+
+        /* Error Section */
+        .error-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 10%;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--neon-red);
+            text-shadow: 0 0 20px var(--neon-red), 0 0 40px var(--neon-red);
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+            animation: glitch 1.5s infinite;
+        }
+
+        .error-msg {
+            font-size: 2rem;
+            color: var(--text-silver);
+            margin-bottom: 30px;
+        }
+
+        .error-terminal {
+            color: var(--neon-green);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            background: rgba(0,255,0,0.05);
+            padding: 15px 30px;
+            border: 1px solid rgba(57, 255, 20, 0.3);
+            border-left: 4px solid var(--neon-green);
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .error-terminal span.cmd { color: var(--neon-cyan); }
+        .error-terminal span.err { color: var(--neon-red); }
+
+        /* Styled Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: var(--neon-cyan);
+            border: 2px solid var(--neon-cyan);
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: var(--neon-cyan);
+            color: #000;
+            box-shadow: 0 0 20px var(--neon-cyan);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            border-top: 1px solid #222;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .error-code { font-size: 6rem; }
+            .error-msg { font-size: 1.5rem; }
+            .error-terminal { font-size: 0.9rem; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">LuckyVerse.tech</a>
+        <div class="terminal-prompt">┌──(lucky㉿localhost)-[~]</div>
+    </header>
+
+    <main class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-msg">SYSTEM_FAILURE: PAGE_NOT_FOUND</h1>
+        
+        <div class="error-terminal">
+            <div><span class="cmd">lucky@server:~$</span> locate requested_resource</div>
+            <div><span class="err">locate: fatal error: </span> resource does not exist in this universe</div>
+            <div style="margin-top:10px"><span class="cmd">lucky@server:~$</span> traceroute user</div>
+            <div>tracing path back to base...</div>
+        </div>
+
+        <a href="/" class="btn">Return to Base</a>
+    </main>
+
+    <footer>
+        <p>/* Developed by Lucky */</p>
+        <p>&copy; 2026 LuckyVerse.tech. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
